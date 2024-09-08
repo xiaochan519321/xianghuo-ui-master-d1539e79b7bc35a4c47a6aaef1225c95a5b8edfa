@@ -1,0 +1,156 @@
+
+$themeHoverColor: rgb(70, 180, 109);
+$themeHoverBg: #EBF3FF;
+
+// element ui覆盖样式 2024/2/5
+.el-button.el-button--primary {
+  background: $themeColor;
+  border-color: $themeColor;
+}
+
+.el-button.el-button--default {
+  &:hover,&:active,&:focus {
+    background: $themeHoverColor;
+    border-color: $themeHoverColor;
+    color: $themeHoverBg;
+    opacity: 0.85;
+  }
+}
+.el-button.el-button--text {
+  color: $themeColor;
+}
+
+//input
+
+.el-input {
+  .el-input__inner {
+    border: 1px solid #D4D6D9;
+    padding-left: 8px;
+    padding-right: 8px;
+    &::placeholder {
+      color: #BBBDBF;
+    }
+    &:focus {
+      border-color: $themeColor !important;
+    }
+  }
+}
+
+//textarea
+.el-textarea {
+  .el-textarea__inner {
+    border: 1px solid #D4D6D9;
+    padding-left: 8px;
+    padding-right: 8px;
+    &::placeholder {
+      color: #BBBDBF;
+    }
+    &:focus {
+      border-color: $themeColor !important;
+    }
+  }
+}
+
+// checkbox
+.el-checkbox__input.is-checked {
+  .el-checkbox__inner {
+    background-color: $themeColor !important;
+    border-color: $themeColor !important;
+   
+  }
+}
+.el-checkbox__input.is-indeterminate .el-checkbox__inner {
+  background-color: $themeColor !important;
+  border-color: $themeColor !important;
+}
+
+//radio
+.el-radio.is-checked {
+  .el-radio__inner {
+    background-color: $themeColor;
+    border-color: $themeColor;
+    &::after {
+      background-color: $themeColor;
+    }
+  }
+  .el-radio__label {
+    color: $themeColor !important;
+  }
+}
+
+//下来此单
+.el-dropdown-menu__item:focus, .el-dropdown-menu__item:not(.is-disabled):hover {
+  background:  $themeHoverBg;;
+  color: $themeColor;
+}
+
+//分页器
+.el-pagination.is-background {
+  .el-pagination__total{
+    color: #31373D;
+  }
+  .el-pagination__sizes {
+    .el-input {
+      width: 80px;
+      margin: 0;
+      .el-input__inner{
+        text-align: left;
+        padding-left: 8px;
+        border: 1px solid #D4D6D9;
+        color: #31373D;
+        border-radius: 4px;
+      }
+    }
+  
+  }
+  .btn-prev {
+    margin-left: 16px;
+    margin-right: 0;
+    background: #F5F6F7;
+    i {
+      color:  #BBBDBF;
+    }
+  }
+  .el-pager{
+    .number{
+      background: #F5F6F7;
+      color: #BBBDBF;
+      margin-left: 8px;
+      margin-right: 0px;;
+      &:hover {
+        color: $themeHoverColor !important;
+      }
+      &.active {
+        background: $themeColor;
+        color: #fff;
+      }
+     
+    }
+  }
+  
+  .btn-next {
+    margin-left: 8px;
+    margin-right: 0;
+    background: #F5F6F7;
+    i {
+      color:  #BBBDBF;
+    }
+  }
+  .el-pagination__jump{
+    margin-left: 24px;
+    font-size: 14px;
+    color: #31373D;
+    .el-input{
+      width: 60px;
+      .el-input__inner {
+        border: 1px solid #D4D6D9;
+        color: #31373D;
+        text-align: center;
+        border-radius: 4px;
+      }
+    }
+  }
+
+}
+
+

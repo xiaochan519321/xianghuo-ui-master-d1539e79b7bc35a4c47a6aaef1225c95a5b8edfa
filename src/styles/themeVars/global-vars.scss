@@ -1,0 +1,105 @@
+// 全局主题样式修改
+
+.theme-color {
+  color: $themeColor;
+}
+
+// tab 标签页
+.avue-tags .el-tabs--card>.el-tabs__header .el-tabs__item.is-active {
+  color: $themeColor;
+  border-bottom: 3px solid $themeColor;
+}
+
+// 按钮
+// .el-button--primary {
+//   background-color: $themeColor;
+//   border-color: $themeColor
+// }
+
+.el-button--primary:focus,
+.el-button--primary:hover {
+  background: $themeColor;
+  border-color: $themeColor;
+  opacity: 0.75;
+}
+
+.el-button--primary.is-active,
+.el-button--primary:active {
+  background: $themeColor;
+  border-color: $themeColor;
+  opacity: 0.75;
+}
+
+// 输入框
+.el-input.is-active .el-input__inner,
+.el-input__inner:focus {
+  border-color: $themeColor;
+}
+
+// 选择器
+.el-select .el-input.is-focus .el-input__inner {
+  border-color: $themeColor;
+}
+
+.el-checkbox__input.is-checked+.el-checkbox__label {
+  color: $themeColor;
+}
+
+.el-select .el-input__inner:focus {
+  border-color: $themeColor;
+}
+
+.el-select-dropdown__item.selected {
+  color: $themeColor;
+}
+
+// Radio 单选框 按钮样式
+.el-radio-button__orig-radio:checked+.el-radio-button__inner {
+  background-color: $themeColor;
+  border-color: $themeColor;
+  -webkit-box-shadow: -1px 0 0 0 $themeColor;
+  box-shadow: -1px 0 0 0 $themeColor;
+}
+
+.el-radio-button__inner:hover {
+  color: $themeColor;
+}
+
+// .el-radio-button__orig-radio:checked+.el-radio-button__inner {
+//   color: #FFF;
+// }
+
+.el-radio-button:focus:not(.is-focus):not(:active):not(.is-disabled) {
+  -webkit-box-shadow: 0 0 2px 2px $themeColor;
+  box-shadow: 0 0 2px 2px $themeColor;
+}
+
+// Link 文字链接
+
+.el-link.el-link--primary {
+  color: $themeColor;
+}
+
+.el-link.el-link--primary:hover {
+  color: $themeColor;
+}
+
+.el-link.el-link--default:after,
+.el-link.el-link--primary.is-underline:hover:after,
+.el-link.el-link--primary:after {
+  border-color: $themeColor;
+}
+
+.el-link.is-underline:hover:after {
+  border-bottom: 1px solid $themeColor;
+}
+
+// 标签页
+.el-tabs__item:hover,
+.el-tabs__item.is-active {
+  color: $themeColor;
+}
+
+.el-tabs__active-bar {
+  background-color: $themeColor;
+}

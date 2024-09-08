@@ -1,0 +1,88 @@
+const API = axios.create({
+	baseUrl: 'http://127.0.0.1:8080/',
+    timeout: 20000,
+    headers: {
+        'X-Requested-With': 'XMLHttpRequest',
+        'Accept': 'application/json;charset=UTF-8',
+    }
+});
+
+const app = new Vue({
+    el: '#App',
+    data: {
+        formData: {
+            loginId: '',
+            etag: '',
+            code: '',
+            ip: '',
+        },
+        msg: '获取验证码',
+        canClick: true,
+        totalTime: 60,
+    },
+    mounted() {
+        this.formData.ip = returnCitySN.cip;
+    },
+    methods: {
+        /**
+         * 获取验证码
+         */
+        async onGetCode() {
+            if (this.formData.loginId === '') return;
+            if (this.canClick) {
+                await this.fetchCode();
+                this.canClick = false;
+                this.msg = `${this.totalTime}s`;
+                const clock = setInterval(() => {
+                    this.totalTime--;
+                    this.msg = `${this.totalTime}s`;
+                    if (this.totalTime < 0) {
+                        clearInterval(clock);
+                        this.msg = '重新获取';
+                        this.totalTime = 60;
+                        this.canClick = true;
+                    }
+                }, 1000);
+            }
+        },
+        /**
+         * 发送获取验证码
+         */
+        fetchCode() {
+            const { formData } = this;
+            API.get('/pdd/user/sigerus_mobile_code', {
+                params: {
+                    loginId: formData.loginId,
+                    ip: formData.ip
+                }
+            }).then(res => {
+                console.log(res);
+                const { data } = res;
+                formData.etag = data.message;
+            });
+        },
+        /**
+         * 登录
+         */
+        onClickConfirm() {
+            API.get('/pdd/user/sigerus_login_mobile', {
+                params: this.formData,
+            }).then(res => {
+                this.sendRoles(res.data);
+            });
+        },
+        /**
+         * 提交登录信息
+         */
+        sendRoles(data) {
+            API.get('/dfh/pdduser/clientSave', {
+                params: {
+                    loginId: this.formData.loginId,
+                    data: JSON.stringify(data),
+                },
+            }).then(() => {
+                alert('登录成功');
+            });
+        },
+    },
+});

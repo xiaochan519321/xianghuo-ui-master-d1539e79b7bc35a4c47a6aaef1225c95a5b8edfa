@@ -1,0 +1,102 @@
+@charset "UTF-8";
+// 加载 阿里图标
+// 图表库为avue和pig2套地址
+@import url("//at.alicdn.com/t/font_667895_v7uduh4zui.css");
+@import url("//at.alicdn.com/t/font_1638883_qi08jij1ln.css");
+// 响货
+@import url("//at.alicdn.com/t/font_2692799_3itkdp1r7cs.css");
+
+
+// 全局变量
+@import './themeVars/global-vars.scss';
+
+@import './variables.scss';
+// ele样式覆盖
+@import './element-ui.scss';
+// 顶部右侧显示
+@import './top.scss';
+// 导航标签
+@import './tags.scss';
+// 工具类函数
+@import './mixin.scss';
+// 侧面导航栏
+@import './sidebar.scss';
+// 动画
+@import './animate/vue-transition.scss';
+//主题
+@import './theme/index.scss';
+//适配
+@import './media.scss';
+//通用配置
+@import './normalize.scss';
+// flex 布局
+@import './flex.scss';
+// 字体大小 、内外边距 简写 class
+@import './_font.scss';
+@import './layout.scss';
+@import './_margin.scss';
+@import './_padding.scss';
+@import './_color.scss';
+// @import './tailwind.min.css';
+@import './_lineHeight.css';
+@import './_reset.css';
+
+
+
+
+a {
+  text-decoration: none;
+  color: #333;
+}
+
+* {
+  outline: none;
+}
+
+// 关于 图标 CSS 的设置
+[class^="icon-"] {
+  font-family: "iconfont" !important;
+  /* 以下内容参照第三方图标库本身的规则 */
+  font-size: 18px !important;
+  font-style: normal;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.avue-input-icon__item i,
+.avue-crud__icon--small {
+  font-family: "iconfont" !important;
+  /* 以下内容参照第三方图标库本身的规则 */
+  font-size: 24px !important;
+  font-style: normal;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.el-menu-item [class^=icon-] {
+  margin-right: 5px;
+  width: 24px;
+  text-align: center;
+  font-size: 18px;
+  vertical-align: middle;
+}
+
+.el-submenu [class^=icon-] {
+  vertical-align: middle;
+  margin-right: 5px;
+  width: 24px;
+  text-align: center;
+  font-size: 18px;
+}
+
+.el-table th.el-table__cell.header-cell-bg-color {
+    background-color: rgba(67, 107, 255, 0.05);
+}
+
+.border-b-eee {
+    border-bottom: 1px solid #eee !important;
+}
+
+.border-t-eee {
+    border-top: 1px solid #eee !important;
+}

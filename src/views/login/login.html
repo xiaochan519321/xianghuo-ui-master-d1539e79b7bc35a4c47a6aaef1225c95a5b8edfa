@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>登录</title>
+
+    <link rel="stylesheet" href="./css/reset.css">
+    <link rel="stylesheet" href="./css/login.css">
+</head>
+
+<body>
+    <div class="login-container flex items-center justify-center" id="App">
+        <div class="wrapper">
+            <div class="content">
+                <div class="logo">
+                    <img src="./images/pdd.png" alt />
+                </div>
+                <div class="form">
+                    <div class="form-item">
+                        <div class="icon shouji">
+                            <img src="./images/shouji.png" alt />
+                        </div>
+                        <input v-model="formData.loginId" type="text" class="c-input" placeholder="手机号">
+                    </div>
+                    <div class="form-item flex items-center">
+                        <div class="icon xinxi">
+                            <img src="./images/xinxi.png" alt />
+                        </div>
+                        <input v-model="formData.code" type="text" class="c-input flex-1" placeholder="验证码">
+                        <button class="code" @click="onGetCode">
+                            <span>{{ msg }}</span>
+                        </button>
+                    </div>
+                    <div class="form-item">
+                        <button class="button confirm" @click.stop="onClickConfirm">
+                            <span>同意协议并登录</span>
+                        </button>
+                    </div>
+                    <div class="form-item">
+                        <button class="button cancel">
+                            <span>返回</span>
+                        </button>
+                    </div>
+                </div>
+                <p class="desc">服务协议与隐私政策</p>
+            </div>
+        </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/vue@2/dist/vue.js"></script>
+    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+    <script src="http://pv.sohu.com/cityjson?ie=utf-8"></script>
+    <script src="./js/index.js"></script>
+</body>
+
+</html>

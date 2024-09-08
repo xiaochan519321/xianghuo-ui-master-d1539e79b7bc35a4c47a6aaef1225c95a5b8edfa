@@ -1,0 +1,59 @@
+/* Colors
+-------------------------- */
+$--color-white: #fff;
+$--color-black: #000;
+
+$--color-primary: #f7b62d !default;
+$--color-primary-light-1: mix($--color-white, $--color-primary, 10%);
+$--color-primary-light-2: mix($--color-white, $--color-primary, 20%);
+$--color-primary-light-3: mix($--color-white, $--color-primary, 30%);
+$--color-primary-light-4: mix($--color-white, $--color-primary, 40%);
+$--color-primary-light-5: mix($--color-white, $--color-primary, 50%);
+$--color-primary-light-6: mix($--color-white, $--color-primary, 60%);
+$--color-primary-light-7: mix($--color-white, $--color-primary, 70%);
+$--color-primary-light-8: mix($--color-white, $--color-primary, 80%);
+$--color-primary-light-9: mix($--color-white, $--color-primary, 90%);
+
+$--color-success: #0fb336 !default;
+$--color-warning: #eb9e05 !default;
+$--color-danger: #e70000 !default;
+$--color-info: #878d99 !default;
+
+$--color-success-light: mix($--color-white, $--color-success, 80%);
+$--color-warning-light: mix($--color-white, $--color-warning, 80%);
+$--color-danger-light: mix($--color-white, $--color-danger, 80%);
+$--color-info-light: mix($--color-white, $--color-info, 80%);
+
+$--color-success-lighter: mix($--color-white, $--color-success, 90%);
+$--color-warning-lighter: mix($--color-white, $--color-warning, 90%);
+$--color-danger-lighter: mix($--color-white, $--color-danger, 90%);
+$--color-info-lighter: mix($--color-white, $--color-info, 90%);
+
+$--color-text-primary: #2d2f33 !default;
+$--color-text-regular: #5a5e66 !default;
+$--color-text-secondary: #909090 !default;
+$--color-text-placeholder: #b4bccc !default;
+
+/* Font
+-------------------------- */
+$--font-path: '~element-ui/lib/theme-chalk/fonts' !default;
+$--font-size-base: 14px;
+$--font-size-small: 13px;
+$--font-size-large: 18px;
+$--font-color-disabled-base: #bbb;
+$--font-weight-primary: 500;
+$--font-line-height-primary: 24px;
+
+/* Header
+--------------------------*/
+$--header-padding: 0px;
+
+/* Footer
+--------------------------*/
+$--footer-padding: 0px;
+
+/* Main
+--------------------------*/
+$--main-padding: 0px;
+
+@import "~element-ui/packages/theme-chalk/src/index";

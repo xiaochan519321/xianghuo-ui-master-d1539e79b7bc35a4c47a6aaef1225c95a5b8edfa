@@ -1,0 +1,43 @@
+@font-face {
+  font-family: "xiconfont"; /* Project id 3382884 */
+  src: url('iconfont.woff2?t=1662098521516') format('woff2'),
+       url('iconfont.woff?t=1662098521516') format('woff'),
+       url('iconfont.ttf?t=1662098521516') format('truetype');
+}
+
+.xiconfont {
+  font-family: "xiconfont" !important;
+  font-size: 16px;
+  font-style: normal;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.xicon-yunshanfu:before {
+  content: "\e632";
+}
+
+.xicon-weixinzhifu:before {
+  content: "\e62a";
+}
+
+.xicon-qq:before {
+  content: "\e615";
+}
+
+.xicon-alipay:before {
+  content: "\e618";
+}
+
+.xicon-purchase:before {
+  content: "\e600";
+}
+
+.xicon-uf_check:before {
+  content: "\e626";
+}
+
+.xicon-downloadfill:before {
+  content: "\e6ce";
+}
+
